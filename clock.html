@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <a href="index.html"><button title="Close application" style="font-family:'Georgia';background-color:#7fb8db;border-radius:6px;">❌ Close</button></a>
+    <script>
+        window.onload = function (){
+        let date = new Date();
+        let time = ((date.getHours().toString()).length>1? date.getHours() : "0"+date.getHours()) +":"+ ((date.getMinutes().toString()).length>1? date.getMinutes() : "0"+date.getMinutes());
+        // +":"+ ((date.getMinutes().toString()).length>1? date.getMinutes() : "0"+date.getMinutes()); 
+        //let time = ((date.getHours().toString()).length>1? date.getHours() : "0"+date.getHours()) +":"+ (date.getMinutes().toString()).length>1? date.getMinutes() : "0"+date.getMinutes() +":"+ ((date.getSeconds().toString()).length>1? date.getMinutes() : "0"+date.getMinutes());
+        //a
+        document.getElementById('date').innerHTML = date
+        document.getElementById('time').innerHTML = time
+        }
+    </script>
+    <h1 style="color:#00ffce;font-family:'Quicksand'" id="time"></h1>
+    <h6 style="color:#ff71e8;font-family:'Trebuchet MS'" id="date"></h6>
+</body>
+</html>
